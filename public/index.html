@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Rastreamento de Armazém</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rastreamento de Tarefas do Armazém</h1>
+      <form id="task-form">
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo" required />
+        <label for="fornecedor">Fornecedor:</label>
+        <input type="text" id="fornecedor" name="fornecedor" required />
+        <label for="descricao">Descrição do Produto:</label>
+        <input type="text" id="descricao" name="descricao" required />
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <option value="Em Armazenamento">Em Armazenamento</option>
+          <option value="Recebido">Recebido</option>
+          <option value="Em recebimento">Em Recebimento</option>
+          <option value="Conferência">Conferência</option>
+          <option value="Aguardando Fiscal">Aguardando Fiscal</option>
+          <option value="Aguardando Qualidade">Aguardando Qualidade</option>
+          <option value="Aguardando Armazenagem">Aguardando Armazenagem</option>
+          <option value="Armazenado">Armazenado</option>
+        </select>
+        <button type="submit">Adicionar Tarefa</button>
+      </form>
+      <table id="task-table">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Fornecedor</th>
+            <th>Descrição</th>
+            <th>Status</th>
+            <th>Data e Hora</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Tarefas serão inseridas aqui -->
+        </tbody>
+      </table>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

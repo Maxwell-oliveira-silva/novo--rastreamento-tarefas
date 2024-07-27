@@ -1,0 +1,154 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form input:focus,
+form select:focus,
+form button:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+table td {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  form input,
+  form select,
+  form button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  form input,
+  form select,
+  form button {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  table th,
+  table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
